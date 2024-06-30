@@ -90,7 +90,7 @@ function Library:Create(xHubName,xGameName)
 
     Sidebar.Name = "Sidebar"
     Sidebar.Parent = Main
-    Sidebar.BackgroundColor3 = Color3.fromRGB(85, 0, 170) -- Purple sidebar
+    Sidebar.BackgroundColor3 = Color3.fromRGB(55, 0, 110) -- Darker purple sidebar
     Sidebar.Size = UDim2.new(0, 140, 0, 370)
 
     SidebarCorner.Name = "SidebarCorner"
@@ -98,7 +98,7 @@ function Library:Create(xHubName,xGameName)
 
     Filler.Name = "Filler"
     Filler.Parent = Sidebar
-    Filler.BackgroundColor3 = Color3.fromRGB(85, 0, 170)
+    Filler.BackgroundColor3 = Color3.fromRGB(55, 0, 110)
     Filler.BorderSizePixel = 0
     Filler.Position = UDim2.new(0.93, 0, 0, 0)
     Filler.Size = UDim2.new(0, 9, 0, 370)
@@ -200,7 +200,7 @@ function Library:Create(xHubName,xGameName)
 
         TabButton.Name = "TabButton"
         TabButton.Parent = ActualSide
-        TabButton.BackgroundColor3 = Color3.fromRGB(85, 0, 170) -- Purple tab button color
+        TabButton.BackgroundColor3 = Color3.fromRGB(55, 0, 110) -- Darker purple tab button color
         TabButton.BorderSizePixel = 0
         TabButton.Size = UDim2.new(0, 139, 0, 35)
         TabButton.Font = Enum.Font.Gotham
@@ -225,10 +225,10 @@ function Library:Create(xHubName,xGameName)
         Tab.ChildRemoved:Connect(Size)
 
         if xVisible then 
-            TabButton.BackgroundColor3 = Color3.fromRGB(110, 0, 220) -- Active purple tab button color
+            TabButton.BackgroundColor3 = Color3.fromRGB(75, 0, 150) -- Active darker purple tab button color
             TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
         else 
-            TabButton.BackgroundColor3 = Color3.fromRGB(85, 0, 170)
+            TabButton.BackgroundColor3 = Color3.fromRGB(55, 0, 110)
             TabButton.TextColor3 = Color3.fromRGB(190, 190, 190)
         end
 
@@ -236,7 +236,7 @@ function Library:Create(xHubName,xGameName)
             Size()
             for i,v in pairs(ActualSide:GetChildren()) do 
                 if v:IsA("TextButton") then 
-                    v.BackgroundColor3 = Color3.fromRGB(85, 0, 170)
+                    v.BackgroundColor3 = Color3.fromRGB(55, 0, 110)
                     v.TextColor3 = Color3.fromRGB(190, 190, 190)
                 end
             end
@@ -247,7 +247,7 @@ function Library:Create(xHubName,xGameName)
 
             Tab.Visible = true
             game:GetService("TweenService"):Create(TabButton, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                BackgroundColor3 = Color3.fromRGB(110, 0, 220)
+                BackgroundColor3 = Color3.fromRGB(75, 0, 150)
             }):Play()
             game:GetService("TweenService"):Create(TabButton, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
                 TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -297,7 +297,7 @@ function Library:Create(xHubName,xGameName)
 
             Label.MouseEnter:Connect(function()
                 game:GetService("TweenService"):Create(LabelFrame, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                    BackgroundColor3 = Color3.fromRGB(55, 55, 60) -- Label hover color
+                    BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Label hover color (Black)
                 }):Play()
             end)
             Label.MouseLeave:Connect(function()
@@ -363,7 +363,7 @@ function Library:Create(xHubName,xGameName)
 
             Button.MouseButton1Down:Connect(function()
                 game:GetService("TweenService"):Create(Button, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                    BackgroundColor3 = Color3.fromRGB(85, 0, 170) -- Button click color
+                    BackgroundColor3 = Color3.fromRGB(55, 0, 110) -- Button click color (Darker purple)
                 }):Play()
                 wait(0.1)
                 game:GetService("TweenService"):Create(Button, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
@@ -374,7 +374,7 @@ function Library:Create(xHubName,xGameName)
 
             Button.MouseEnter:Connect(function()
                 game:GetService("TweenService"):Create(Button, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                    BackgroundColor3 = Color3.fromRGB(55, 55, 60) -- Button hover color
+                    BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Button hover color (Black)
                 }):Play()
             end)
             Button.MouseLeave:Connect(function()
@@ -477,7 +477,7 @@ function Library:Create(xHubName,xGameName)
             ToggleButton.MouseButton1Down:Connect(function()
                 ToggleEnabled = not ToggleEnabled
                 if ToggleEnabled then 
-                    game:GetService("TweenService"):Create(ToggleF, TweenInfo.new(0.3), {BackgroundColor3 = Color3.fromRGB(85, 0, 170)}):Play() -- Toggle on color
+                    game:GetService("TweenService"):Create(ToggleF, TweenInfo.new(0.3), {BackgroundColor3 = Color3.fromRGB(55, 0, 110)}):Play() -- Toggle on color (Darker purple)
                     game:GetService("TweenService"):Create(ToggleCircle, TweenInfo.new(0.3), {Position = UDim2.new(0.559, 0,0.153, 0)}):Play() 
                 else
                     game:GetService("TweenService"):Create(ToggleF, TweenInfo.new(0.3), {BackgroundColor3 = Color3.fromRGB(110, 110, 120)}):Play() 
@@ -528,7 +528,7 @@ function Library:Create(xHubName,xGameName)
 
             SliderTrail.Name = "SliderTrail"
             SliderTrail.Parent = SliderButton
-            SliderTrail.BackgroundColor3 = Color3.fromRGB(85, 0, 170) -- Slider trail color
+            SliderTrail.BackgroundColor3 = Color3.fromRGB(55, 0, 110) -- Slider trail color (Darker purple)
             SliderTrail.Size = UDim2.new(0, 0, 0, 10)
             SliderTrail.BorderSizePixel = 0
 
@@ -685,7 +685,7 @@ function Library:Create(xHubName,xGameName)
 
             Textbox.Focused:Connect(function()
                 game:GetService("TweenService"):Create(Textbox, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                    BackgroundColor3 = Color3.fromRGB(85, 0, 170) -- Textbox focus color
+                    BackgroundColor3 = Color3.fromRGB(55, 0, 110) -- Textbox focus color (Darker purple)
                 }):Play()
             end)
 
@@ -761,7 +761,7 @@ function Library:Create(xHubName,xGameName)
 
             KeybindButton.MouseButton1Click:connect(function() 
                 game.TweenService:Create(KeybindButton, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                    BackgroundColor3 = Color3.fromRGB(85, 0, 170) -- Keybind button focus color
+                    BackgroundColor3 = Color3.fromRGB(55, 0, 110) -- Keybind button focus color (Darker purple)
                 }):Play()
                 KeybindButton.Text = ". . ."
                 local v1, v2 = game:GetService('UserInputService').InputBegan:wait();
@@ -880,7 +880,7 @@ function Library:Create(xHubName,xGameName)
 
             DropdownButton.MouseEnter:Connect(function()
                 game:GetService("TweenService"):Create(DropdownFrame, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                    BackgroundColor3 = Color3.fromRGB(55, 55, 60) -- Dropdown hover color
+                    BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Dropdown hover color (Black)
                 }):Play()
             end)
             DropdownButton.MouseLeave:Connect(function()
@@ -915,7 +915,7 @@ function Library:Create(xHubName,xGameName)
                     Tab.CanvasSize = UDim2.new(0,0,0,DropListLayout.AbsoluteContentSize.Y + 100)
                     wait(0.1)
                     game:GetService("TweenService"):Create(DropdownIcon, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                        ImageColor3 = Color3.fromRGB(85, 0, 170) -- Dropdown icon color
+                        ImageColor3 = Color3.fromRGB(55, 0, 110) -- Dropdown icon color (Darker purple)
                     }):Play()
                     Tab.CanvasSize = UDim2.new(0,0,0,DropListLayout.AbsoluteContentSize.Y + 100)
                 end 
@@ -945,7 +945,7 @@ function Library:Create(xHubName,xGameName)
                         end 
                     end
                     game:GetService("TweenService"):Create(Option, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                        TextColor3 = Color3.fromRGB(85, 0, 170) -- Option selected color
+                        TextColor3 = Color3.fromRGB(55, 0, 110) -- Option selected color (Darker purple)
                     }):Play()
                     DropList:TweenSize(UDim2.new(0, 408, 0, 35), "InOut", "Linear", 0.1)
                     game:GetService("TweenService"):Create(DropdownIcon, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
@@ -960,7 +960,7 @@ function Library:Create(xHubName,xGameName)
 
                 Option.MouseEnter:Connect(function()
                     game:GetService("TweenService"):Create(Option, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                        BackgroundColor3 = Color3.fromRGB(55, 55, 60) -- Option hover color
+                        BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Option hover color (Black)
                     }):Play()
                 end)
                 Option.MouseLeave:Connect(function()
@@ -998,7 +998,7 @@ function Library:Create(xHubName,xGameName)
                             end 
                         end
                         game:GetService("TweenService"):Create(Option, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                            TextColor3 = Color3.fromRGB(85, 0, 170)
+                            TextColor3 = Color3.fromRGB(55, 0, 110)
                         }):Play()
                         DropList:TweenSize(UDim2.new(0, 408, 0, 35), "InOut", "Linear", 0.1)
                         game:GetService("TweenService"):Create(DropdownIcon, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
@@ -1013,7 +1013,7 @@ function Library:Create(xHubName,xGameName)
     
                     Option.MouseEnter:Connect(function()
                         game:GetService("TweenService"):Create(Option, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                            BackgroundColor3 = Color3.fromRGB(55, 55, 60)
+                            BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                         }):Play()
                     end)
                     Option.MouseLeave:Connect(function()
