@@ -225,7 +225,7 @@ function Library:Create(xHubName,xGameName)
         Tab.ChildRemoved:Connect(Size)
 
         if xVisible then 
-            TabButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Active black tab button color
+            TabButton.BackgroundColor3 = Color3.fromRGB(55, 74, 251) -- Purple active color
             TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
         else 
             TabButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -247,7 +247,7 @@ function Library:Create(xHubName,xGameName)
 
             Tab.Visible = true
             game:GetService("TweenService"):Create(TabButton, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-                BackgroundColor3 = Color3.fromRGB(55, 74, 251) -- Hover purple color
+                BackgroundColor3 = Color3.fromRGB(55, 74, 251) -- Hover and active purple color
             }):Play()
             game:GetService("TweenService"):Create(TabButton, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
                 TextColor3 = Color3.fromRGB(255, 255, 255)
