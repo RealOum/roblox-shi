@@ -1,4 +1,4 @@
-local Library = {}
+llocal Library = {}
 local LibraryName = "blazed.lol"
 
 function Library:Toggle()
